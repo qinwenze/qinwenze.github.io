@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>My Homepage</title>
+
+  </head>
+
+
+  <style>
+/*-------------------------------*/
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+  /*----------------------------------------*/
+  body {margin:0;}
+  ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  ul.topnav li {float: left;}
+
+  ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+
+  ul.topnav li a:hover {background-color: #555;}
+
+  ul.topnav li.icon {display: none;}
+
+  @media screen and (max-width:680px) {
+    ul.topnav li:not(:first-child) {display: none;}
+    ul.topnav li.icon {
+      float: right;
+      display: inline-block;
+    }
+  }
+
+  @media screen and (max-width:680px) {
+    ul.topnav.responsive {position: relative;}
+    ul.topnav.responsive li.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    ul.topnav.responsive li {
+      float: none;
+      display: inline;
+    }
+    ul.topnav.responsive li a {
+      display: block;
+      text-align: left;
+    }
+  }
+
+
+  /*----------------------------------------*/
+
+  .chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+}
+
+.chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.closebtn {
+    padding-left  : 30px;
+    color: #888;
+    font-weight: bold;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.closebtn:hover {
+    color: #000;
+}
+
+
+/*-----------------------------------------*/
+  </style>
+  <style>
+  body {
+      font-family: "Lato", sans-serif;
+      transition: background-color .5s;
+  }
+
+  .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+  }
+
+  .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s
+  }
+
+  .sidenav a:hover, .offcanvas a:focus{
+      color: #f1f1f1;
+  }
+
+  .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+  }
+
+  #main {
+      transition: margin-left .5s;
+      padding: 16px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  </style>
+  <body>
+
+
+
+
+    <ul class="topnav" id="myTopnav">
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+      <li class="icon">
+        <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+      </li>
+    </ul>
+
+    <script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+    </script>
+
+
+
+
+
+
+    <div class="chip">
+      <img src="contact-logo.png" alt="Person" width="96" height="96">
+      Owen Zeng
+      <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+    </div>
+
+
+
+
+
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div id="main">
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+    </div>
+
+    <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        document.body.style.backgroundColor = "white";
+    }
+    </script>
+
+
+
+
+
+  </body>
+</html>
